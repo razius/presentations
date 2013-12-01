@@ -35,8 +35,8 @@
       {{ css.screen.contents }}
     </style>
     {% else %}
-    <link rel="stylesheet" media="print" href="{{ css.print.path_url }}">
-    <link rel="stylesheet" media="screen, projection" href="{{ css.screen.path_url }}">
+    <link rel="stylesheet" media="print" href="/{{ css.print.path_url }}">
+    <link rel="stylesheet" media="screen, projection" href="/{{ css.screen.path_url }}">
     {% endif %}
     {% for css in user_css %}
       {% if embed %}
@@ -44,7 +44,7 @@
         {{ css.contents }}
       </style>
       {% else %}
-      <link rel="stylesheet" href="{{ css.path_url }}">
+      <link rel="stylesheet" href="/{{ css.path_url }}">
       {% endif %}
     {% endfor %}
     <!-- /Styles -->
@@ -54,7 +54,7 @@
       {{ js.contents }}
     </script>
     {% else %}
-    <script type="text/javascript" src="{{ js.path_url }}"></script>
+    <script type="text/javascript" src="/{{ js.path_url }}"></script>
     {% endif %}
     {% for js in user_js %}
       {% if embed %}
@@ -62,7 +62,7 @@
         {{ js.contents }}
       </script>
       {% else %}
-      <script type="text/javascript" src="{{ js.path_url }}"></script>
+      <script type="text/javascript" src="/{{ js.path_url }}"></script>
       {% endif %}
     {% endfor %}
     <!-- /Javascripts -->
