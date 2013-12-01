@@ -1,6 +1,3 @@
-# find . -not -name "README.md" -name "*.md" -exec landslide -r -t theme/ {} -d test/index.html \;
-# dir=${a%/*}
-# file=${a##*/}
 MD_FILES = $(shell find . -not -name "README.md" -name "*.md")
 HTML_FILES = $(MD_FILES:.md=.html)
 
