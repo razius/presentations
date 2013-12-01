@@ -11,4 +11,4 @@ all: clean $(HTML_FILES)
 
 clean:
 	@echo 'Removing old html presentation files.'
-	rm $(HTML_FILES)
+	rm -f $(HTML_FILES)
