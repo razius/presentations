@@ -1,11 +1,11 @@
-MD_FILES = $(shell find . -not -name "README.md" -name "*.md")
-HTML_FILES = $(MD_FILES:.md=.html)
+RST_FILES = $(shell find . -not -name "README.rst" -name "*.rst")
+HTML_FILES = $(RST_FILES:.rst=.html)
 
 .PHONY: all
 
-%.html : %.md
+%.html : %.rst
 	@echo 'Generating html presentation file for $<'
-	@landslide -r -t theme/ $< -d $@
+	@landslide -l table -i -r -t theme $< -d $@
 
 all: clean $(HTML_FILES)
 
