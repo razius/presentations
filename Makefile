@@ -11,9 +11,9 @@ OUTPUT_FILES = $(foreach INPUT_FILE, $(INPUT_FILES), $(OUTPUT_DIR)/$(shell dirna
 	$(shell dirname $@ | xargs mkdir -p)
 	@landslide -q -l table -i -r -t $(THEME_DIR) $< -d $@
 
-publish: clean $(OUTPUT_FILES)
+build: clean $(OUTPUT_FILES)
 
-github: publish
+github: build
 	ghp-import $(OUTPUT_DIR)
 	git push origin gh-pages
 
@@ -21,4 +21,7 @@ clean:
 	@echo 'Removing old html presentation files.'
 	@rm -rf $(OUTPUT_DIR)/*
 
-.PHONY: clean, publish, github
+watch:
+	while inotifywait $(INPUT_FILES); do make build; done
+
+.PHONY: clean, build, github, watch
