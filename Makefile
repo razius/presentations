@@ -1,14 +1,24 @@
-RST_FILES = $(shell find . -not -name "README.rst" -name "*.rst")
-HTML_FILES = $(RST_FILES:.rst=.html)
+BASE_DIR=$(CURDIR)
+INPUT_DIR=$(BASE_DIR)/content
+OUTPUT_DIR=$(BASE_DIR)/output
+THEME_DIR=$(BASE_DIR)/theme
 
-.PHONY: all
+INPUT_FILES=$(shell find $(INPUT_DIR) -not -name "README.rst" -name '*.rst')
+OUTPUT_FILES = $(foreach INPUT_FILE, $(INPUT_FILES), $(OUTPUT_DIR)/$(shell dirname $(INPUT_FILE) | xargs basename)/index.html)
 
-%.html : %.rst
-	@echo 'Generating html presentation file for $<'
-	@landslide -l table -i -r -t theme $< -d $@
+%.html : $(INPUT_FILES)
+	@echo 'Generating html presentation file $@'
+	$(shell dirname $@ | xargs mkdir -p)
+	@landslide -q -l table -i -r -t $(THEME_DIR) $< -d $@
 
-all: clean $(HTML_FILES)
+publish: clean $(OUTPUT_FILES)
+
+github: publish
+	ghp-import $(OUTPUT_DIR)
+	git push origin gh-pages
 
 clean:
 	@echo 'Removing old html presentation files.'
-	rm -f $(HTML_FILES)
+	@rm -rf $(OUTPUT_DIR)/*
+
+.PHONY: clean, publish, github

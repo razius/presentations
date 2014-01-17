@@ -256,13 +256,14 @@ header:not(:only-child) {
 }
 
 header h1, header h2, header h3, header h4, header h5, header h6 {
-    color: #51C9EF;
+    color: #27AE60;
     font-size: 100%;
     font-weight: bold;
     padding: 0;
     margin: 0;
     text-transform: uppercase;
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    text-align: center;
 }
 
 header h2:first-child {
