@@ -22,6 +22,7 @@ clean:
 	@rm -rf $(OUTPUT_DIR)/*
 
 watch:
-	while inotifywait $(INPUT_FILES); do make build; done
+	@echo "Watching $(INPUT_DIR) for file changes."
+	@while inotifywait -q -r $(INPUT_DIR); do make build; done
 
 .PHONY: clean, build, github, watch
