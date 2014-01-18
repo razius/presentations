@@ -12,6 +12,10 @@ OUTPUT_FILES = $(foreach INPUT_FILE, $(INPUT_FILES), $(OUTPUT_DIR)/$(shell dirna
 	@landslide -q -l table -i -r -t $(THEME_DIR) $< -d $@
 
 build: clean $(OUTPUT_FILES)
+	@echo 'Generating index file.'
+	$(shell echo '<h2>Presentations</h2><ul>' > $(OUTPUT_DIR)/index.html)
+	$(shell cd $(OUTPUT_DIR) && find . -type d ! -name '.' -exec basename {} \; | xargs -L 1 -I '{}' echo '<li><a href="{}">{}</a></li>' >> $(OUTPUT_DIR)/index.html)
+	$(shell echo '</ul>' >> $(OUTPUT_DIR)/index.html)
 
 github: build
 	ghp-import $(OUTPUT_DIR)
@@ -23,6 +27,6 @@ clean:
 
 watch:
 	@echo "Watching $(INPUT_DIR) for file changes."
-	@while inotifywait -q -r $(INPUT_DIR); do make build; done
+	@while inotifywait -q -r $(INPUT_DIR) $(THEME_DIR); do make build; done
 
 .PHONY: clean, build, github, watch
