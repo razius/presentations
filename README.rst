@@ -1,11 +1,11 @@
 Presentations
 #############
 
-My collection of presentations.
+My collection of presentations, statically generated from reStructuredText files using `landslide <https://github.com/adamzap/landslide>`_ and hosted using `Github Pages <https://pages.github.com/>`_.
 
 Requirements
 ============
 
-This project uses `landslide <https://github.com/adamzap/landslide>`_ to generate the presentations, you can easily install it using pip::
+This project uses to generate the presentations, you can easily install it using pip::
 
-    pip install landslide
+    pip install landslide ghp-import
