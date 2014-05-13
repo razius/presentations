@@ -3,9 +3,14 @@ Presentations
 
 My collection of presentations, statically generated from reStructuredText files using `landslide <https://github.com/adamzap/landslide>`_ and hosted using `Github Pages <https://pages.github.com/>`_.
 
-Requirements
-============
+Browse them at razius.github.io/presentations <http://razius.github.io/presentations/>`_.
 
-This project uses to generate the presentations, you can easily install it using pip::
+Getting started
+===============
 
-    pip install landslide ghp-import
+Install requirements using pip::
+
+    pip install -r requirements.txt
+
+
+
