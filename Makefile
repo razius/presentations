@@ -7,8 +7,6 @@ THEME_DIR=theme/
 INPUT_FILES=$(shell find $(INPUT_DIR) -not -name "README.rst" -name '*.rst')
 OUTPUT_FILES=$(INPUT_FILES:$(INPUT_DIR)%.rst=$(OUTPUT_DIR)%.html)
 
-# OUTPUT_FILES = $(foreach INPUT_FILE, $(INPUT_FILES), $(OUTPUT_DIR)/$(shell dirname $(INPUT_FILE) | xargs basename)/index.html)
-
 %.html:
 	@echo 'Generating html presentation file $@.'
 	$(shell dirname $@ | xargs mkdir -p)
