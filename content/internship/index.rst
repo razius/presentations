@@ -7,6 +7,18 @@
 
 ----
 
+.. image:: img/s1.png
+
+----
+
+.. image:: img/s2.png
+
+----
+
+.. image:: img/s3.png
+
+----
+
 About
 #####
 
@@ -21,14 +33,41 @@ Working from the lovely city of Copenhagen, Denmark, we are building the world's
 Iconfinder in numbers
 #####################
 
-.. image:: img/dilbert-pie.png
+Site usage
+----------
 
-----
+.. class:: infograf span4
 
-Iconfinder in numbers
-#####################
+    Avg. visits per month
+        2.1M
 
-Bla bla bla
+.. class:: infograf span4
+
+    Icons in total
+        350.2K
+
+.. class:: infograf span4
+
+    Total downloads
+        156M
+
+The geeky stats
+---------------
+
+.. class:: infograf span4
+
+    Servers
+        15
+
+.. class:: infograf span4
+
+    Lines of code
+        FILL
+
+.. class:: infograf span4
+
+    Coffee consumed
+        156L
 
 ----
 
@@ -61,8 +100,8 @@ http://blog.iconfinder.com/staying-sane-while-defying-joel-spolsky-with-django/
 
 ----
 
-Code Sample
-###########
+Some of my tasks
+################
 
 Landslide supports code snippets
 
@@ -74,3 +113,18 @@ Landslide supports code snippets
 
         if self.verbose and self.logger:
             self.logger(message, level)
+
+----
+
+Vagrant Box
+###########
+
+svasva
+
+----
+
+Notification system
+###################
+
+sadsdas
+

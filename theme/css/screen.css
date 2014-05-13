@@ -1,5 +1,5 @@
 body {
-    font: 14px 'Vollkorn', Georgia, Times, serif;
+    font: 18px 'Vollkorn', Georgia, Times, serif;
     background-color: #F0F0F0;
     padding: 0;
     margin: 0;
@@ -250,20 +250,19 @@ header:not(:only-child) {
     color: black;
     position: absolute;
     left: 30px;
-    top: 25px;
+    top: 45px;
     margin: 0;
     padding: 0;
 }
 
 header h1, header h2, header h3, header h4, header h5, header h6 {
-    color: #27AE60;
     font-size: 100%;
     font-weight: bold;
     padding: 0;
     margin: 0;
+    color: #27AE60;
     text-transform: uppercase;
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-    text-align: center;
 }
 
 header h2:first-child {
@@ -347,6 +346,22 @@ li pre { margin-left: 0em; }
 
 dt {
     font-weight: bold;
+}
+
+.infograf dt {
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    color: #999;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.infograf dd {
+    margin-left: 0;
+    color: #222;
+    font-size: 42px;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
 
 dd {
@@ -543,4 +558,10 @@ aside.page_number {
     height: 100%;
     z-index: 64;
     display: none;
+}
+
+
+.span4 {
+    width: 33%;
+    float: left;
 }
