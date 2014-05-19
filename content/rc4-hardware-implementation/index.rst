@@ -22,21 +22,18 @@ Schematics overview
 ===================
 
 .. figure:: img/rc4-chip-schematics.png
-    :align: center
-    :width: 60%
 
 ----
 
-The counter
+Accumulator
 ===========
 
-.. figure:: img/counter.png
-    :width: 70%
+.. figure:: img/accumulator.png
 
 ----
 
-Flip-flops
-==========
+Flip-flop
+=========
 
 .. figure:: img/d-flip-flop.png
 
