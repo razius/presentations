@@ -46,15 +46,6 @@ Register bank
 
 ----
 
-Internal state
-==============
-
-.. figure:: img/register-banks.png
-    :align: center
-    :width: 55%
-
-----
-
 KSA Phase
 =========
 
@@ -68,3 +59,7 @@ KSA Phase
         j := (j + S[i] + key[i mod keylength]) mod 256
         swap values of S[i] and S[j]
     endfor
+
+.. figure:: img/register-banks.png
+    :align: center
+    :width: 90%
