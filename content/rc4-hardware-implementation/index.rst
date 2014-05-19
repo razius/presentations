@@ -6,14 +6,20 @@ RC4: A hardware implementation
 Short introduction
 ==================
 
-* Widely used, integrated into TLS/SSL, WEP, Remote Desktop Protocol, SSH, BitTorrent and Skype ammong others.
+Widely used, integrated into TLS/SSL, WEP, Remote Desktop Protocol, SSH, BitTorrent and Skype ammong others.
 
-* Consists of two stages, **KSA** and **PRGA**.
+Consists of two stages:
+
+KSA:
+    Key-scheduling algorithm
+PRGA:
+    Pseudo-random generation algorithm
+
 
 ----
 
-Schematics
-==========
+Schematics overview
+===================
 
 .. figure:: img/rc4-chip-schematics.png
     :align: center
@@ -21,11 +27,39 @@ Schematics
 
 ----
 
-KSA
-===
+The counter
+===========
 
-Key-scheduling algorithm
-------------------------
+.. figure:: img/counter.png
+    :width: 70%
+
+----
+
+Flip-flops
+==========
+
+.. figure:: img/d-flip-flop.png
+
+----
+
+Register bank
+=============
+
+.. figure:: img/register-bank.png
+
+----
+
+Internal state
+==============
+
+.. figure:: img/register-banks.png
+    :align: center
+    :width: 55%
+
+----
+
+KSA Phase
+=========
 
 .. code-block:: python
 
@@ -37,48 +71,3 @@ Key-scheduling algorithm
         j := (j + S[i] + key[i mod keylength]) mod 256
         swap values of S[i] and S[j]
     endfor
-
-----
-
-KSA: VHDL implementation
-========================
-
-.. figure:: img/rc4-storage-block-schematics.png
-    :align: center
-    :width: 100%
-
-----
-
-KSA: VHDL implementation
-========================
-
-.. figure:: img/register-banks.png
-    :align: center
-    :width: 55%
-
-----
-
-PRGA
-====
-
-Pseudo-random generation algorithm
-----------------------------------
-
-.. code-block:: python
-
-    i := 0
-    j := 0
-    while GeneratingOutput:
-        i := (i + 1) mod 256
-        j := (j + S[i]) mod 256
-        swap values of S[i] and S[j]
-        K := S[(S[i] + S[j]) mod 256]
-        output K
-    endwhile
-
-----
-
-PRGA: VHDL implementation
-=========================
-
-.
