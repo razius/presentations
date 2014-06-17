@@ -1,0 +1,25 @@
+I'm gonna tell you a little bit about the company first, I worked for a company in Copenhagen called Iconfinder. It is currently the largest search engine for icons and we have the largest collection of premium icons.
+
+The team is really small, we are 5 people including me, usually this means it's a permanent "all hands on deck" situation.
+
+We get about 3 million unique visitors per month and aproxpimately 3 million requests per day which are serviced by 15 servers
+
+2 DB
+4 WEB
+1 STAGING
+2 CACHING
+1 BUILD
+1 STORAGE
+1 BACKUP
+
+Everything is build using open source tools and we released code as open source code or contribute with patches to opensource projects.
+
+Our main codebase has about 100k lines of python code.
+
+It is build using a popular web framework called Django which is used by large scale websites like Pinterest, Instagram, Mozilla, The Washington Times, NASA.
+We use PostgreSQL as the database server, git for distributed version control and puppet for provisioning.
+
+Each of us is responsible for the whole life-cycle of the application, that includes everything from ...
+This allows us to iterate over features and change direction very very fast, we deploy daily.
+
+

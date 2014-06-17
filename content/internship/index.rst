@@ -4,19 +4,6 @@
 
 **Simply the largest collection of premium icons in the world.**
 
-
-----
-
-.. image:: img/s1.png
-
-----
-
-.. image:: img/s2.png
-
-----
-
-.. image:: img/s3.png
-
 ----
 
 About
@@ -38,13 +25,13 @@ Site usage
 
 .. class:: infograf span4
 
-    Avg. visits per month
-        2.1M
+    Visitors/month
+        3M
 
 .. class:: infograf span4
 
-    Icons in total
-        350.2K
+    Requests/day
+        3M
 
 .. class:: infograf span4
 
@@ -62,7 +49,7 @@ The geeky stats
 .. class:: infograf span4
 
     Lines of code
-        FILL
+        100K
 
 .. class:: infograf span4
 
@@ -71,60 +58,111 @@ The geeky stats
 
 ----
 
-Tools of the trade
-##################
+Build on Open Source
+####################
 
 Main codebase:
-    Django (Python)
-
-Others:
-    Go, NodeJS (Javascript), Java, C++, Bash
+    .. figure:: img/logos/django.png
+        :width: 30%
+        :align: left
 
 Database:
-    PostgreSQL
+    .. figure:: img/logos/postgresql.png
+        :width: 30%
+        :align: left
 
 Revision control:
-    Git (DVCS)
+    .. figure:: img/logos/git.png
+        :width: 20%
+        :align: left
 
 Configuration management:
-    Puppet
+    .. figure:: img/logos/puppet.png
+        :width: 30%
+        :align: left
 
 ----
 
-Architecture and workflow
-#########################
+DevOps culture
+##############
 
-Bla bla
-
-http://blog.iconfinder.com/staying-sane-while-defying-joel-spolsky-with-django/
+.. figure:: img/devops-loop.png
+    :align: center
+    :width: 80%
 
 ----
 
-Some of my tasks
-################
+Workflow
+########
 
-Landslide supports code snippets
+.. figure:: img/trello.png
+    :width: 90%
 
-.. code-block:: python
+----
 
-    def log(self, message, level='notice'):
-        if self.logger and not callable(self.logger):
-            raise ValueError(u"Invalid logger set, must be a callable")
+Workflow
+########
 
-        if self.verbose and self.logger:
-            self.logger(message, level)
+.. figure:: img/git-flow-1.png
+    :width: 70%
+
+----
+
+Workflow
+########
+
+.. figure:: img/git-flow-2.png
+    :width: 70%
+
+----
+
+Workflow
+########
+
+.. figure:: img/janky.png
+    :width: 70%
+
+----
+
+Workflow
+########
+
+.. figure:: img/git-flow-3.png
+    :width: 70%
+
+----
+
+Workflow
+########
+
+.. figure:: img/git-flow-4.png
+    :width: 70%
+
+----
+
+Workflow
+########
+
+.. figure:: img/sentry.png
 
 ----
 
 Vagrant Box
 ###########
 
-svasva
+.. figure:: img/vagrant-console.png
+    :width: 90%
 
 ----
 
-Notification system
-###################
+Other tasks
+###########
 
-sadsdas
-
+* Notification framework that pushes in real time events from the
+  back-end to the clients browser.
+* Custom tailored comment system.
+* Automated system that pushes out recommendation emails to users
+  based on what they bought in the past.
+* PayPal integration for cashing out.
+* CSS responsive layout optimization for mobile.
+* Took active participation in finding and squashing a large amount of bugs.
